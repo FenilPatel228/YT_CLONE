@@ -1,0 +1,15 @@
+<html>
+    <head>
+        {% from 'CLONE.html' import card %}
+        <link rel="stylesheet" href="static/YT_clone.css">
+    </head>
+    
+    <body>
+    <div id="home">   
+        {% for video in video %}
+            {{ card(video) }}
+        {% endfor %}
+    </div> 
+    </body>
+
+</html>

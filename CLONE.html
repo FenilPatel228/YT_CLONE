@@ -1,0 +1,25 @@
+{% macro card(video) -%}
+    <div class='card'>
+        <div class="thumbnailContainer">
+            <img 
+            src="{{video['thumbnails'] | image}}"
+            class="thumbnail"/>     
+        </div>
+
+        <div class="infocontainer">
+            <div class="channelLogoContaier">
+                <img
+                src="https://yt3.ggpht.com/ytc/AGIKgqN8GgrkGaaRTY5ekdsoAALXvJQaMzGP71b4RTjmJQ=s88-c-k-c0x00ffffff-no-rj"
+                alt="channel"
+                class="channelLogo"/>
+            </div>
+            <div class="info">
+                <p>{{video['title']}}</p>
+                <span>BBC</span><br>
+                <span>{{video['stats']['views']}}views • {{video['publishedTimeText']}}</span>
+                
+            </div>
+
+        </div>
+    </div>
+{%- endmacro %}
